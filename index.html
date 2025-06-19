@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soldadura y Precisión</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            background-color: #8B4513;
+            font-family: Arial, sans-serif;
+        }
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: url('/img/menulog.jpg') center center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner img {
+            display: none; /* Oculto, ya que usamos la imagen como fondo */
+        }
+        header {
+            width: 100%;
+            background: #222;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            border: 1px solid #6473ffc2;
+            background-color: darkslateblue;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+            transition: box-shadow 0.3s, transform 0.3s;
+            margin: 0;
+            justify-content: center;
+        }
+        nav ul:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.19),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transform: scale(1.05);
+        }
+        nav li {
+            margin: 0 15px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav li::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: blueviolet;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        nav li:hover {
+            color: #f0f0f0;
+            transform: translateY(-3px);
+        }
+        nav li:hover::after {
+            transform: scaleX(1);
+        }
+        nav li a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav li a:hover {
+            color: #ffd700;
+        }
+        .Center {
+            text-align: center;
+        }
+        .left {
+            text-align: left;
+        }
+        .content {
+            padding: 30px 10vw;
+        }
+        @media (max-width: 800px) {
+            .banner {
+                height: 180px;
+            }
+            .content {
+                padding: 20px 2vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <!-- Si quieres mostrar un logo encima del fondo, descomenta la siguiente línea -->
+        <!-- <img src="/img/menulog.jpg" alt="Logo" height="120"> -->
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <h1 class="Center">Cortinas Metálicas Enrollables - Fabricación y Reparación</h1>
+        <p class="Center">Ofrecemos servicios de fabricación y reparación de cortinas metálicas enrollables para hogares y negocios. 
+            Nuestros productos son diseñados para brindar seguridad, privacidad y estilo.</p>
+        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+            <!-- Primer bloque de servicios -->
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 7px;">
+                <div>
+                    <h2 class="left" style="margin-bottom: 4px; margin-top: 0;">Servicios</h2>
+                    <ul class="left" style="margin-top: 3;">
+                        <li>Fabricación de cortinas metálicas enrollables personalizadas</li>
+                        <li>Reparación y mantenimiento de cortinas existentes</li>
+                        <li>Instalación profesional en todo el país</li>
+                        <li>Asesoramiento sobre seguridad y diseño</li>
+                        <li>Garantía de calidad en todos nuestros productos</li>
+                        <li>Servicio al cliente excepcional</li>
+                    </ul>
+                </div>
+                <img 
+                    height="200"
+                    width="350"
+                    alt="Cortina Metálica"
+                    src="https://png.pngtree.com/png-clipart/20210128/ourmid/pngtree-aluminum-blinds-png-image_2806632.jpg"
+                    style="display: block;">
+            </div>
+            <!-- Segundo bloque de servicios -->
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 7px;">
+                <div>
+                    <h2 class="left" style="margin-bottom: 4px; margin-top: 0;">Servicios</h2>
+                    <ul class="left" style="margin-top: 3;">
+                        <li>Soldadura de estructuras metálicas</li>
+                        <li>Reparación de portones y rejas</li>
+                        <li>Fabricación de barandales y escaleras metálicas</li>
+                        <li>Soldadura de acero inoxidable y aluminio</li>
+                        <li>Refuerzo y modificación de estructuras existentes</li>
+                        <li>Servicios de corte y doblado de metal</li>
+                    </ul>
+                </div>
+                <img 
+                    height="200"
+                    width="350"
+                    alt="Cortina Metálica"
+                    src="https://png.pngtree.com/png-clipart/20210128/ourmid/pngtree-aluminum-blinds-png-image_2806632.jpg"
+                    style="display: block;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
