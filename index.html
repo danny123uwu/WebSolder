@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soldadura y Precisión</title>
+
   <style>
     * {
       margin: 0;
@@ -20,7 +21,6 @@
       flex-direction: column;
     }
 
-    /* Menú de navegación */
     header {
       position: fixed;
       top: 0;
@@ -47,9 +47,16 @@
     nav li {
       position: relative;
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 20px;
       cursor: pointer;
     }
+    
+    /* Para móviles */
+@media (max-width: 768px) {
+  nav li {
+    font-size: 20px; /* Aumenta aún más para pantallas pequeñas */
+  }
+}
 
     nav li a {
       text-decoration: none;
@@ -78,26 +85,32 @@
       transform: scaleX(1);
     }
 
-    /* Banner */
-    /* Banner */
-.banner-container {
-  margin-top: 80px; /* Altura del header */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-}
+    .banner-container {
+      margin-top: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+    }
 
-.banner-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain; /* Muestra toda la imagen sin recorte */
-}
+    .banner-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: contain;
+    }
 
-    /* Contenido principal */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 2rem 1rem;
+    }
+
     .content {
-      padding: 30px 10vw;
+      width: 100%;
+      max-width: 1200px;
       display: flex;
       flex-direction: column;
       gap: 30px;
@@ -111,32 +124,54 @@
       text-align: center;
     }
 
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-
     .service-block {
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 15px;
-      max-width: 700px;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 3rem auto;
+      padding: 1rem;
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 12px;
     }
 
-    .service-block ul {
-      text-align: left;
+    .service-block h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      text-align: center;
     }
-
-    .service-block img {
+    /* Estilos para la galería de imágenes */
+    .image-gallery {
+      display: flex;
+      width: 100%;
       max-width: 100%;
-      height: auto;
-      border-radius: 8px;
+      height: 40vh;
+      overflow: hidden;
     }
 
-    /* Responsive */
+    .image-gallery img {
+      flex-grow: 1;
+      width: 0;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: 0.5s ease;
+      border-radius: 10px;
+    }
+
+    .image-gallery img:hover {
+      flex-grow: 3.4;
+      opacity: 1;
+      filter: contrast(120%);
+      cursor: crosshair;
+    }
+
+    @media (min-width: 1024px) {
+      .image-gallery {
+        height: 50vh;
+      }
+    }
+
     @media (max-width: 768px) {
       .banner-img {
         height: 180px;
@@ -146,16 +181,48 @@
         padding: 20px 5vw;
       }
 
-      .service-block {
+      .image-gallery {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        height: auto;
       }
 
-      .service-block ul {
-        text-align: center;
+      .image-gallery img {
+        width: 100% !important;
+        flex-grow: 0 !important;
+        margin-bottom: 10px;
       }
     }
+
+    /* Estilos para el pie de página */
+    footer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 2rem 1rem;
+      /*estilos para texto*/
+      background-color:rgb(77, 77, 77);
+      color: #000000;
+      font-size: 14px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      font-weight: bold;
+      /*tamaño de fuente*/
+      font-size: 1.5rem;
+      margin-top: auto;
+
+    }
+    footer a {
+      color: #f5f5f5;
+      text-decoration:black;
+      font-weight: bold;
+       font-size: 1.2rem;
+       /*posicionamiento de los enlaces*/
+      margin: 5px 0;
+      position: sticky;
+    }
+
   </style>
 </head>
 <body>
@@ -171,62 +238,121 @@
     </nav>
   </header>
 
-  <!-- Imagen de presentación -->
+  <!-- Imagen principal -->
   <div class="banner-container">
-    <img src="img/menulog.jpg" class="banner-img">
+    <img src="/img/menulog.jpg" class="banner-img" />
   </div>
 
-  <!-- Contenido principal -->
-  <div class="content">
-    <h1>Cortinas Metálicas Enrollables - Fabricación y Reparación</h1>
-    <p>
-      Ofrecemos servicios de fabricación y reparación de cortinas metálicas enrollables para hogares y negocios. Nuestros productos están diseñados para brindar seguridad, privacidad y estilo.
-    </p>
+  <!-- Contenido -->
+  <main>
+    <div class="content">
+      <h1>Cortinas Metálicas Enrollables - Fabricación y Reparación</h1>
+      <p>
+        Ofrecemos servicios de fabricación y reparación de cortinas metálicas enrollables para
+         hogares y negocios. Nuestros productos están diseñados para brindar seguridad, privacidad y estilo.
+      </p>
 
-    <div class="services">
       <!-- Bloque 1 -->
       <div class="service-block">
-        <div>
-          <h2>Servicios</h2>
-          <ul>
-            <li>Fabricación de cortinas metálicas enrollables personalizadas</li>
-            <li>Reparación y mantenimiento de cortinas existentes</li>
-            <li>Instalación profesional en todo el país</li>
-            <li>Asesoramiento sobre seguridad y diseño</li>
-            <li>Garantía de calidad en todos nuestros productos</li>
-            <li>Servicio al cliente excepcional</li>
-          </ul>
+        <h2>Instalación de Techos</h2>
+        <div class="image-gallery">
+          <img src="/img/POZO/IMG1.jpg" />
+          <img src="/img/POZO/IMG2.jpg" />
+          <img src="/img/POZO/IMG3.jpg" />
+          <img src="/img/POZO/IMG4.jpg" />
+          <img src="/img/POZO/IMG6.jpg" />
         </div>
-        <img
-          src="https://png.pngtree.com/png-clipart/20210128/ourmid/pngtree-aluminum-blinds-png-image_2806632.jpg"
-          alt="Cortina Metálica"
-          width="350"
-          height="200"
-        />
       </div>
 
       <!-- Bloque 2 -->
       <div class="service-block">
-        <div>
-          <h2>Servicios</h2>
-          <ul>
-            <li>Soldadura de estructuras metálicas</li>
-            <li>Reparación de portones y rejas</li>
-            <li>Fabricación de barandales y escaleras metálicas</li>
-            <li>Soldadura de acero inoxidable y aluminio</li>
-            <li>Refuerzo y modificación de estructuras existentes</li>
-            <li>Servicios de corte y doblado de metal</li>
-          </ul>
+        <h2>Reparación de Estructuras Metalicas</em></h2>
+        <div class="image-gallery">
+          <img src="/img/Reparacion/re1.jpg" />
+          <img src="/img/Reparacion/re2.jpg" />
+          <img src="/img/Reparacion/re3.jpg" />
+          <img src="/img/Reparacion/r4.jpg" />
+          <img src="/img/Reparacion/r5.jpg" />
+          <img src="/img/Reparacion/re6.jpg" />
         </div>
-        <img
-          src="https://png.pngtree.com/png-clipart/20210128/ourmid/pngtree-aluminum-blinds-png-image_2806632.jpg"
-          alt="Cortina Metálica"
-          width="350"
-          height="200"
-        />
+      </div>
+
+      <!-- Bloque 3 -->
+      <div class="service-block">
+        <h2>Fabricacion de Cortinas Henrrollables</h2>
+        <div class="image-gallery">
+          <img src="/img/Cortinas_Enrrollables/ims1.jpg" />
+          <img src="/img/Cortinas_Enrrollables/ims2.jpg" />
+          <img src="/img/Cortinas_Enrrollables/ims3.jpg" />
+          <img src="/img/Cortinas_Enrrollables/ims4.jpg" />
+          <img src="/img/Cortinas_Enrrollables/ims5.jpg" />
+          <img src="/img/Cortinas_Enrrollables/ims6.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 4 -->
+      <div class="service-block">
+        <h2>Fabricacion e Instalacion de Valcones</h2>
+        <div class="image-gallery">
+          <img src="/img/Valcones/val3.jpg" />
+          <img src="/img/Valcones/val4.jpg" />
+          <img src="/img/Valcones/val1.jpg" />
+          <img src="/img/Valcones/val2.jpg" />
+          <img src="/img/Valcones/val5.jpg" />
+          <img src="/img/Valcones/val6.jpg" />
+          <img src="/img/Valcones/val7.jpg" />
+          <img src="/img/Valcones/val8.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 5 -->
+      <div class="service-block">
+        <h2>Fabricacion e Instalacion de Puertas</h2>
+        <div class="image-gallery">
+          <img src="/img/Puertas/pur1.jpg" />
+          <img src="/img/Puertas/pur2.jpg" />
+          <img src="/img/Puertas/pur3.jpg" />
+          <img src="/img/Puertas/pur4.jpg" />
+          <img src="/img/Puertas/pur5.jpg" />
+          <img src="/img/Puertas/pur6.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 6 -->
+      <div class="service-block">
+        <h2>Vallas Publicitarias</h2>
+        <div class="image-gallery">
+          <img src="/img/VALLAS_PUBLICITARIAS/img1.jpg" />
+          <img src="/img/VALLAS_PUBLICITARIAS/img2.jpg" />
+          <img src="/img/VALLAS_PUBLICITARIAS/img3.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 7 -->
+      <div class="service-block">
+        <h2>Instalación de Rótulos Luminosos</h2>
+        <div class="image-gallery">
+          <img src="/img/Install_Rotulos/im5.jpg" />
+          <img src="/img/Install_Rotulos/im6.jpg" />
+          <img src="/img/Install_Rotulos/im1.jpg" />
+          <img src="/img/Install_Rotulos/img2.jpg" />
+          <img src="/img/Install_Rotulos/im3.jpg" />
+          <img src="/img/Install_Rotulos/img4.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 8 -->
+      <div class="service-block">
+        <h2>Instalacion de Varandales</h2>
+        <div class="image-gallery">
+          <img src="/img/Varandales/var1.jpg" />
+          <img src="/img/Varandales/var2.jpg" />
+          <img src="/img/Varandales/var3.jpg" />
+        </div>
       </div>
     </div>
-  </div>
+
+  </main>
 
   <!-- JavaScript para ocultar/mostrar el menú -->
   <script>
@@ -244,6 +370,21 @@
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
+
   </script>
+
 </body>
+
+<footer >
+    Copyright 2025- Portafolio de Trabajos de Soldadura y Precisión
+    <br>
+    <br>
+    <pc style="color: #f0f6ef; font-weight: bold;">Contactos:</p>
+ 
+    <a style="color: cyan; " href="tel:+50265465465441">Llamada Telefónica   </a>
+   <a style="color: #46f343;" href="https://wa.me/50238044748?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20los%20servicios%20de%20soldadura,%20fabricación%20o%20reparación%20de%20trabajos%20metálicos.%20¿Podrían%20orientarme%20con%20información%20o%20una%20cotización?" target="_blank">WhatsApp</a>
+
+</footer>
+
+
 </html>
