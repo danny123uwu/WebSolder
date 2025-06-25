@@ -1,0 +1,239 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #8b4513;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background-color: #222;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      padding: 12px 20px;
+      background-color: darkslateblue;
+      border-radius: 15px;
+      margin: 10px auto;
+      max-width: 90%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    nav li {
+      position: relative;
+      text-transform: uppercase;
+      font-size: 17px;
+      cursor: pointer;
+    }
+    
+    /* Para móviles */
+@media (max-width: 768px) {
+  nav li {
+    font-size: 14.89px; /* Aumenta aún más para pantallas pequeñas */
+  }
+}
+
+    nav li a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    nav li:hover a {
+      color: #ffd700;
+    }
+
+    nav li::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: blueviolet;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav li:hover::after {
+      transform: scaleX(1);
+    }
+
+    .banner-container {
+      margin-top: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .banner-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 2rem 1rem;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .service-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 3rem auto;
+      padding: 1rem;
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 12px;
+    }
+
+    .service-block h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    /* Estilos para la galería de imágenes */
+    .image-gallery {
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+      height: 40vh;
+      overflow: hidden;
+    }
+
+    .image-gallery img {
+      flex-grow: 1;
+      width: 0;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: 0.5s ease;
+      border-radius: 10px;
+    }
+
+    .image-gallery img:hover {
+      flex-grow: 3.4;
+      opacity: 1;
+      filter: contrast(120%);
+      cursor: crosshair;
+    }
+
+    @media (min-width: 1024px) {
+      .image-gallery {
+        height: 50vh;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .banner-img {
+        height: 180px;
+      }
+
+      .content {
+        padding: 20px 5vw;
+      }
+
+      .image-gallery {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .image-gallery img {
+        width: 100% !important;
+        flex-grow: 0 !important;
+        margin-bottom: 10px;
+      }
+    }
+
+    /* Estilos para el pie de página */
+    footer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 2rem 1rem;
+      scroll-margin-top: 80px;
+      /*estilos para texto*/
+      background-color:rgb(77, 77, 77);
+      color: #000000;
+      font-size: 14px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      font-weight: bold;
+      /*tamaño de fuente*/
+      font-size: 1.5rem;
+      margin-top: auto;
+
+    }
+    footer a {
+      color: #f5f5f5;
+      text-decoration:black;
+      font-weight: bold;
+       font-size: 1.2rem;
+       /*posicionamiento de los enlaces*/
+      margin: 5px 0;
+      position: sticky;
+    }
+
+
+    /*desplazamiento sueave del del menu*/
+    html{
+      scroll-behavior: smooth;
+    }
+
+/* Estilos para las descripciones */
+.descriptions {
+  text-align: justify; 
+  font-size: 23px;
+  font-weight: arial;
+}
+        /* Para móviles */
+@media (max-width: 768px) {
+  .descriptions {
+    font-size: 14.89px; /* Aumenta aún más para pantallas pequeñas */
+  }
+}
+
+    
+

@@ -1,175 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soldadura y Precisión</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        body {
-            min-height: 100vh;
-            background-color: #8B4513;
-            font-family: Arial, sans-serif;
-        }
-        .banner {
-            width: 100%;
-            height: 300px;
-            background: url('/img/menulog.jpg') center center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .banner img {
-            display: none; /* Oculto, ya que usamos la imagen como fondo */
-        }
-        header {
-            width: 100%;
-            background: #222;
-            padding: 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        nav ul {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-            padding: 10px 20px;
-            border-radius: 15px;
-            border: 1px solid #6473ffc2;
-            background-color: darkslateblue;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-            transition: box-shadow 0.3s, transform 0.3s;
-            margin: 0;
-            justify-content: center;
-        }
-        nav ul:hover {
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.19),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            transform: scale(1.05);
-        }
-        nav li {
-            margin: 0 15px;
-            color: white;
-            font-size: 14px;
-            cursor: pointer;
-            text-transform: uppercase;
-            position: relative;
-            transition: color 0.3s, transform 0.3s;
-        }
-        nav li::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 100%;
-            height: 2px;
-            background-color: blueviolet;
-            transform: scaleX(0);
-            transform-origin: center;
-            transition: transform 0.3s ease-in-out;
-        }
-        nav li:hover {
-            color: #f0f0f0;
-            transform: translateY(-3px);
-        }
-        nav li:hover::after {
-            transform: scaleX(1);
-        }
-        nav li a {
-            color: inherit;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        nav li a:hover {
-            color: #ffd700;
-        }
-        .Center {
-            text-align: center;
-        }
-        .left {
-            text-align: left;
-        }
-        .content {
-            padding: 30px 10vw;
-        }
-        @media (max-width: 800px) {
-            .banner {
-                height: 180px;
-            }
-            .content {
-                padding: 20px 2vw;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soldadura y Precisión</title>
+  <link rel="stylesheet" href="estilos.css"/>
 </head>
+
 <body>
-    <div class="banner">
-        <!-- Si quieres mostrar un logo encima del fondo, descomenta la siguiente línea -->
-        <!-- <img src="/img/menulog.jpg" alt="Logo" height="120"> -->
-    </div>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+  <!-- Menú -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#Texto">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#footer">Contacto</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Imagen principal -->
+  <div class="banner-container">
+    <img id="Texto" src="/img/menulog.jpg" class="banner-img" />
+  </div>
+
+  <!-- Contenido -->
+  <main>
     <div class="content">
-        <h1 class="Center">Cortinas Metálicas Enrollables - Fabricación y Reparación</h1>
-        <p class="Center">Ofrecemos servicios de fabricación y reparación de cortinas metálicas enrollables para hogares y negocios. 
-            Nuestros productos son diseñados para brindar seguridad, privacidad y estilo.</p>
-        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
-            <!-- Primer bloque de servicios -->
-            <div style="display: flex; flex-direction: row; align-items: center; gap: 7px;">
-                <div>
-                    <h2 class="left" style="margin-bottom: 4px; margin-top: 0;">Servicios</h2>
-                    <ul class="left" style="margin-top: 3;">
-                        <li>Fabricación de cortinas metálicas enrollables personalizadas</li>
-                        <li>Reparación y mantenimiento de cortinas existentes</li>
-                        <li>Instalación profesional en todo el país</li>
-                        <li>Asesoramiento sobre seguridad y diseño</li>
-                        <li>Garantía de calidad en todos nuestros productos</li>
-                        <li>Servicio al cliente excepcional</li>
-                    </ul>
-                </div>
-                <img 
-                    height="200"
-                    width="350"
-                    alt="Cortina Metálica"
-                    src="https://png.pngtree.com/png-clipart/20210128/ourmid/pngtree-aluminum-blinds-png-image_2806632.jpg"
-                    style="display: block;">
-            </div>
-            <!-- Segundo bloque de servicios -->
-            <div style="display: flex; flex-direction: row; align-items: center; gap: 7px;">
-                <div>
-                    <h2 class="left" style="margin-bottom: 4px; margin-top: 0;">Servicios</h2>
-                    <ul class="left" style="margin-top: 3;">
-                        <li>Soldadura de estructuras metálicas</li>
-                        <li>Reparación de portones y rejas</li>
-                        <li>Fabricación de barandales y escaleras metálicas</li>
-                        <li>Soldadura de acero inoxidable y aluminio</li>
-                        <li>Refuerzo y modificación de estructuras existentes</li>
-                        <li>Servicios de corte y doblado de metal</li>
-                    </ul>
-                </div>
-                <img 
-                    height="200"
-                    width="350"
-                    alt="Cortina Metálica"
-                    src="https://png.pngtree.com/png-clipart/20210128/ourmid/pngtree-aluminum-blinds-png-image_2806632.jpg"
-                    style="display: block;">
-            </div>
+      <h1 > Elmer Santizo – Soldador Profesional y 
+        Especialista en Estructuras Metálicas</h1>
+      <p class="descriptions">
+Con más de una década de experiencia, Elmer Santizo es un soldador guatemalteco altamente capacitado en la creación,
+ reparación e instalación de estructuras metálicas. Su trabajo abarca desde la fabricación de cortinas metálicas, toldos,
+  balcones y puertas, hasta proyectos más complejos con acero inoxidable, aluminio, PVC y vidrio. Además, ha realizado instalaciones
+   eléctricas básicas en viviendas. Su versatilidad y compromiso lo han llevado a trabajar en múltiples departamentos del país, incluyendo
+    Retalhuleu, Escuintla, Santa Rosa, Sololá, Petén, Jutiapa y El Progreso. Cada proyecto refleja su dedicación, precisión y pasión 
+    por el oficio, consolidándose como un referente en soluciones metálicas y construcción a nivel nacional. Evidencias de su trabajo </p>
+      </p>
+
+      <!-- Bloque 1 -->
+      <div class="service-block">
+        <h2>Instalación de Techos</h2>
+        <div class="image-gallery">
+          <img src="/img/POZO/IMG1.jpg" />
+          <img src="/img/POZO/IMG2.jpg" />
+          <img src="/img/POZO/IMG3.jpg" />
+          <img src="/img/POZO/IMG4.jpg" />
+          <img src="/img/POZO/IMG6.jpg" />
         </div>
+      </div>
+
+      <!-- Bloque 2 -->
+      <div class="service-block">
+        <h2>Reparación de Estructuras Metalicas</em></h2>
+        <div class="image-gallery">
+          <img src="/img/Reparacion/re1.jpg" />
+          <img src="/img/Reparacion/re2.jpg" />
+          <img src="/img/Reparacion/re3.jpg" />
+          <img src="/img/Reparacion/r4.jpg" />
+          <img src="/img/Reparacion/r5.jpg" />
+          <img src="/img/Reparacion/re6.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 3 -->
+      <div class="service-block">
+        <h2>Fabricacion de Cortinas Henrrollables</h2>
+        <div class="image-gallery">
+          <img src="/img/Cortinas_Enrrollables/ims1.jpg" />
+          <img src="/img/Cortinas_Enrrollables/ims2.jpg" />
+          <img src="/img/Cortinas_Enrrollables/ims3.jpg" />
+          <img src="/img/Cortinas_Enrrollables/ims4.jpg" />
+          <img src="/img/Cortinas_Enrrollables/ims5.jpg" />
+          <img src="/img/Cortinas_Enrrollables/ims6.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 4 -->
+      <div class="service-block">
+        <h2>Fabricacion e Instalacion de Valcones</h2>
+        <div class="image-gallery">
+          <img src="/img/Valcones/val3.jpg" />
+          <img src="/img/Valcones/val4.jpg" />
+          <img src="/img/Valcones/val1.jpg" />
+          <img src="/img/Valcones/val2.jpg" />
+          <img src="/img/Valcones/val5.jpg" />
+          <img src="/img/Valcones/val6.jpg" />
+          <img src="/img/Valcones/val7.jpg" />
+          <img src="/img/Valcones/val8.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 5 -->
+      <div class="service-block">
+        <h2>Fabricacion e Instalacion de Puertas</h2>
+        <div class="image-gallery">
+          <img src="/img/Puertas/pur1.jpg" />
+          <img src="/img/Puertas/pur2.jpg" />
+          <img src="/img/Puertas/pur3.jpg" />
+          <img src="/img/Puertas/pur4.jpg" />
+          <img src="/img/Puertas/pur5.jpg" />
+          <img src="/img/Puertas/pur6.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 6 -->
+      <div class="service-block">
+        <h2>Vallas Publicitarias</h2>
+        <div class="image-gallery">
+          <img src="/img/VALLAS_PUBLICITARIAS/imgss1.jpg" />
+          <img src="/img/VALLAS_PUBLICITARIAS/imgss2.jpg" />
+          <img src="/img/VALLAS_PUBLICITARIAS/imgss3.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 7 -->
+      <div class="service-block">
+        <h2>Instalación de Rótulos Luminosos</h2>
+        <div class="image-gallery">
+          <img src="/img/Install_Rotulos/im5.jpg" />
+          <img src="/img/Install_Rotulos/im6.jpg" />
+          <img src="/img/Install_Rotulos/im1.jpg" />
+          <img src="/img/Install_Rotulos/img2.jpg" />
+          <img src="/img/Install_Rotulos/im3.jpg" />
+          <img src="/img/Install_Rotulos/img4.jpg" />
+        </div>
+      </div>
+
+      <!-- Bloque 8 -->
+      <div class="service-block">
+        <h2>Instalacion de Varandales</h2>
+        <div class="image-gallery">
+          <img src="/img/Varandales/var1.jpg" />
+          <img src="/img/Varandales/var2.jpg" />
+          <img src="/img/Varandales/var3.jpg" />
+        </div>
+      </div>
     </div>
+
+  </main>
+
+  <!-- JavaScript para ocultar/mostrar el menú -->
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        header.style.transform = "translateY(0)";
+      } else {
+        header.style.transform = "translateY(-100%)";
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+  </script>
+
 </body>
+
+<footer id="footer">
+    Copyright 2025- Portafolio de Trabajos de Soldadura y Precisión
+    <br>
+    <br>
+    <pc style="color: #f0f6ef; font-weight: bold;">Contactos:</p>
+ 
+    <a style="color: cyan; " href="tel:+50265465465441">Llamada Telefónica   </a>
+   <a style="color: #46f343;" href="https://wa.me/50238044748?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20los%20servicios%20de%20soldadura,%20fabricación%20o%20reparación%20de%20trabajos%20metálicos.%20¿Podrían%20orientarme%20con%20información%20o%20una%20cotización?" target="_blank">WhatsApp</a>
+
+</footer>
+
+
 </html>
